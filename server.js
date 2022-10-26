@@ -1,8 +1,13 @@
 const express = require('express');
+const cors = require('cors');
 const connectDB = require('./config/db');
 const path = require('path');
 const fileUpload = require('express-fileupload');
 const app = express();
+
+app.use(cors({
+  origin: '*'
+}));
 
 // Connect Database
 connectDB();
